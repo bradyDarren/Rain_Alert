@@ -2,8 +2,8 @@ import requests
 from twilio.rest import Client 
 
 API_KEY = '16fb8560f0c501abec59b9b2768be345'
-# ACCOUNT_SID = 'Account SSID' # Sensitive Info
-# AUTH_TOKEN = 'Auth Token' # Sensitive Info
+ACCOUNT_SID = 'Account SSID' # Sensitive Info
+AUTH_TOKEN = 'Auth Token' # Sensitive Info
 
 parameters = {
     'lat': 29.7589,
