@@ -27,8 +27,8 @@ for time in range(len(weather_data)):
         client = Client(ACCOUNT_SID, AUTH_TOKEN)
         message = client.messages.create(
         body="It's going to rain today, Remeber to bring an ☔️",
-        from_="+18335735893",
-        to="+17135828104",
+        from_="whatsapp:+14155238886",
+        to="whatsapp:+17135828104",
         )
         unbrella_needed = True
         print(message.status)
