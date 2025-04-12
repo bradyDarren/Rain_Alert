@@ -1,9 +1,10 @@
 import requests
+import os 
 from twilio.rest import Client 
 
-API_KEY = '16fb8560f0c501abec59b9b2768be345'
-ACCOUNT_SID = 'Account SSID' # Sensitive Info
-AUTH_TOKEN = 'Auth Token' # Sensitive Info
+API_KEY = os.environ.get('OWM_API_KEY')
+ACCOUNT_SID = os.environ.get('OWM_ACCOUNT_SID')
+AUTH_TOKEN = os.environ.get('OWM_AUTH_TOKEN')
 
 parameters = {
     'lat': 29.7589,
@@ -26,8 +27,8 @@ for time in range(len(weather_data)):
         client = Client(ACCOUNT_SID, AUTH_TOKEN)
         message = client.messages.create(
         body="It's going to rain today, Remeber to bring an ☔️",
-        from_="",
-        to="",
+        from_="+18335735893",
+        to="+17135828104",
         )
         unbrella_needed = True
         print(message.status)
